@@ -13,7 +13,23 @@ int sommaElementiArray(int[] array): che preso un array di numeri interi, restit
 /* Una volta completate queste funzioni di utilità di base, e dato il seguente array di numeri [2, 6, 7, 5, 3, 9]
 già dichiarato nel vostro codice, si vogliono utilizzare le funzioni per:*/
 
-int[] ArrayNumeri = { 2, 6, 7, 5, 3, 9 };
+
+int[] ArrayNumeri;
+
+Console.WriteLine("Quanti numeri vuoi inserire nell' array?");
+
+int LunghezzaArray = int.Parse(Console.ReadLine());
+ArrayNumeri = new int[LunghezzaArray];
+
+Console.WriteLine("Quali numeri vuoi inserire nell' array?");
+
+for (int i = 0;i < LunghezzaArray; i++)
+    {
+    Console.WriteLine($"Inserisci il {i+1}° numero");
+    int InputUtente = (int) float.Parse(Console.ReadLine());
+    ArrayNumeri[i] = InputUtente;   
+    }
+
 
 // Stampare l’array di numeri fornito a video
 
@@ -61,7 +77,7 @@ void StampaArrayInteri(int[] array)
             }
         else
             {
-            Console.Write( + array[i] + ",");
+            Console.Write(+array[i] + ",");
             }
         }
     Console.Write("]");
